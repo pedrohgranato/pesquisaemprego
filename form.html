@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style/style.css">
+
+</head>
+<body >
+
+<div class="container">
+
+<header id="header">
+  <div>
+   <h1><a class="menu" href="index.html">Home</a>   <a class="menu" href="form.html">Contato <a class="menu" href="sobre.html">Sobre</a></h1>
+   </div>
+</header>
+
+<?php require 'index.php';?>
+   <div class="div_form">
+    <form action="cadastrar.php" method="post" name="cadastro_musica">
+    <fieldset>
+      <legend>Lista de Musicas:</legend>
+      <select name="cidades">
+                    <option></option>
+                    <?php foreach ($arrCombo as $key => $value): ?>
+                        <?php echo "<option value=\"$key\" >$value</option>"; ?>
+                    <?php endforeach; ?>
+                </select>
+    <input type="submit" name="submit" value="Enviar">
+      </fieldset>
+      
+      </form>
+      
+</div>
+<br><br><br><br><br>
+<footer>Copyright &copy; By Elisângela Dubiel & Pedro Granato </footer>
+
+</body>
+</html>
